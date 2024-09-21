@@ -1,0 +1,45 @@
+{
+  "name": "ts-decorator",
+  "version": "1.0.0",
+  "description": "TypeScript decorator test project",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack",
+    "start": "cross-env NODE_ENV=development webpack --watch",
+    "server": "nodemon ./src/koa/index.ts",
+    "debug": "nodemon --exec 'node -r ts-node/register --inspect-brk=127.0.0.1:9229 ./src/koa/index.ts'"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "*.md",
+      "*.html"
+    ]
+  },
+  "keywords": [
+    "TypeScript",
+    "Decorator"
+  ],
+  "author": "dcm",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/formidable": "^3.4.5",
+    "@types/koa__cors": "^5.0.0",
+    "nodemon": "^2.0.22",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "@koa/bodyparser": "^5.1.1",
+    "@koa/cors": "^5.0.0",
+    "@types/koa": "^2.13.6",
+    "@types/koa-router": "^7.4.4",
+    "cross-env": "^7.0.3",
+    "formidable": "^3.5.1",
+    "glob": "^9.3.2",
+    "koa": "^2.14.1",
+    "koa-router": "^12.0.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
